@@ -41,6 +41,7 @@ body {
     width: 100%;
     height: 100%;
     opacity: 0;
+    cursor: pointer;
 }
 
 .active-option {
@@ -138,13 +139,25 @@ button:active {
     }
   }
   .copy-button > svg {
+}
+
+.copy-svg {
     width: 40px;
     position: absolute;
-  }
-
-  .copy-svg-complete {
+    
+}
+.copy-svg-complete {
+    height: 40px;
+    width: max-content;
+    position: absolute;
     color: rgb(34 197 94);
     opacity: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .copy-svg-complete > svg {
+    height: 60%;
   }
   @keyframes copy-svg-active {
     0% {

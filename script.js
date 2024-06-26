@@ -17,6 +17,7 @@ optionsInputs.forEach(input => {
         options[input.id] = input.checked
         const label = document.getElementById(`${input.id}-label`)
         label.classList.toggle("active-option")
+        text.innerHTML = ""
 
     })
 })
@@ -25,6 +26,7 @@ passwordLength.innerHTML = `Length: ${slider.value}`;
 
 slider.oninput = function() {
   passwordLength.innerHTML = `Length: ${this.value}`;
+  text.innerHTML = ""
 }
 
 button.addEventListener("click", () => {
