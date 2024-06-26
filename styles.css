@@ -1,0 +1,184 @@
+body {
+    margin: 50px 0px;
+    padding: 0px;
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(240 249 255);
+}
+
+.content {
+    margin: auto;
+    width: 75%;
+    max-width: 500px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(125 211 252);
+    transition: all 150ms;
+    font-size: 1rem;
+}
+
+.option {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.active-option {
+    background-color: rgb(237, 237, 237);
+    color: grey;
+    text-decoration: line-through;
+}
+
+.range-slider {
+    width: 100%;
+}
+.range-slider > input {
+    width: 100%;
+}
+
+button {
+    background-color: rgb(125 211 252);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 150ms;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(56 189 248);
+}
+
+button:active {
+    background-color: rgb(14 165 233);
+}
+
+#password {
+    width: 100%;
+    text-align: center;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: rgb(14 165 233);
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(14 165 233);
+    cursor: pointer;
+  }
+
+  .copy-button {
+    border-radius: 5px;
+    width: max-content;
+    margin: 0px auto;
+    position: relative;
+    height: 60px;
+    aspect-ratio: 1/1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none !important;
+  }
+  @keyframes copy-button-active {
+    0% {
+        background-color: rgb(125 211 252);
+    }
+    20% {
+        background-color: transparent;
+    }
+    80% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: rgb(125 211 252);
+    }
+  }
+  .copy-button > svg {
+    width: 40px;
+    position: absolute;
+  }
+
+  .copy-svg-complete {
+    color: rgb(34 197 94);
+    opacity: 0;
+  }
+  @keyframes copy-svg-active {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    20% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    80% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+  @keyframes copy-svg-complete-active {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    80% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+  }
