@@ -138,8 +138,6 @@ button:active {
         background-color: rgb(125 211 252);
     }
   }
-  .copy-button > svg {
-}
 
 .copy-svg {
     width: 40px;
@@ -194,4 +192,9 @@ button:active {
         opacity: 0;
         transform: translateX(10px);
     }
+  }
+
+  #password {
+    font-size: 1rem;
+    font-weight: bold;
   }
